@@ -21,7 +21,6 @@ I’m sharing this for the benefit of the community. If you find it helpful, ple
 https://www.paypal.com/donate/?business=CV5LLN6DKMGYC&no_recurring=0&currency_code=USD
 
 ![GUI Screenshot](gui.png)
-*(Placeholder for gui.png - Please replace this with your actual screenshot)*
 
 ## Features
 

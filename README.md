@@ -95,31 +95,7 @@ https://www.paypal.com/donate/?business=CV5LLN6DKMGYC&no_recurring=0&currency_co
 
 Custom command to write to the controller memory folow this paterns:
 
-How it works for write to flash:
-(For some changes to the flash you need to isable enable input or restart the controller
-for changes to take effect)
-F1  00  0A  FF FF  00 20  08  11 22 33 44 55 66 77 88
-│   │   │    ││     │ │   │  └─ 8 data bytes ────────┘
-│   │   │    ││     │ │   └──── payload-size byte (06 = 6)
-│   │   │    ││     │ └──────── **page-offset high byte** (0x00, 0x20, 0x40 …)
-│   │   │    ││     └────────── **bank selector** (00 = A, 01 = B)
-│   │   │    └┴──────────────── always FF FF (padding)
-│   │   └────────────────────── sub-cmd 0x0A  (WRITE)
-│   └────────────────────────── dummy 00 (always present)
-└────────────────────────────── Report ID 0xF1
-
-How it works for read from flash:
-(When you want to read just send the command with corect data and read with get report on report id F1)
-F1  00  0B  FF FF 00 20  FF 10 FF
-│   │   │    ││    │ │   │  │  └─ don't-care padding (any value, just to reach 9+ bytes)
-│   │   │    ││    │ │   │  └──── addrLo start-address low-byte (10 hex)
-│   │   │    ││    │ │   └─────── unused (keep FF for safety)
-│   │   │    ││    │ └─────────── **page-offset high byte** (0x00, 0x20, 0x40 …)
-│   │   │    ││    └───────────── **bank selector** (00 = A, 01 = B)
-│   │   │    └┴────────────────── padding FF FF
-│   │   └──────────────────────── sub-cmd 0x0B  (READ)
-│   └──────────────────────────── dummy 00
-└──────────────────────────────── Report ID 0xF1
+![Commands Screenshot](commands.png)
 
 ## Key Functionalities Explained
 

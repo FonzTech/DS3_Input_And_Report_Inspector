@@ -139,6 +139,16 @@ Custom command to write to the controller memory folow this paterns:
 *   **Caution with Write Operations:** Modifying flash memory (general flashing, stick calibration writes) or sending arbitrary SET_REPORT commands can be **dangerous and potentially render your controller unresponsive (brick it)**. Always back up your controller's flash memory before attempting writes if possible, and proceed with extreme caution.
 *   **Motion Sensor Values:** The displayed m/s² and °/S values depend on fetched calibration data (Report 0xEF) and predefined sensitivity constants. These provide a good approximation but might vary slightly between controllers. The physical-to-display axis mapping for accelerometers (e.g., which physical axis corresponds to the 'Y' label showing gravity) has been configured based on common observations but might need adjustment if your controller behaves differently.
 
+## My Other Apps
+DriftGuard Steam:
+https://store.steampowered.com/app/3174550/DriftGuard_Gamepad_Maintenance_Tool/&ved=2ahUKEwju89yVk7WNAxUmLhAIHedLEoAQFnoECCAQAQ&sqi=2&usg=AOvVaw0hLXtn8F1MCW30srD_W4pR
+
+Driftguard Android:
+https://play.google.com/store/apps/details?id=com.vestracode.driftguard
+
+Dualsense Edge Modules Callibration And Unlock Tool:
+https://github.com/lewy20041/Dualsense_Edge_Modules_Callibration
+
 ## License
 
 This project is licensed under the MIT License.

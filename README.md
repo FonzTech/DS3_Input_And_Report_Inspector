@@ -8,11 +8,25 @@ This application is packaged using [PyInstaller](https://www.pyinstaller.org/), 
 # Why do some antivirus programs flag the `.exe` as a virus?
 Some antivirus software may falsely flag executables created by PyInstaller as potentially harmful. This is a known issue and is typically a **false positive**. If you are concerned, you can:
 1. **Inspect or run the source code** using Python directly (no installer needed).
-2. **Build the executable yourself** using PyInstaller (Will add later).
+2. **Build the executable yourself** using PyInstaller.
 3. Scan it with multiple antivirus engines to rule out any genuine threat.
 
 # Can I run it without the large executable?
-Yes once i add source code.
+1.Download and install python
+
+2.Create a folder on disk C like DS3_Input_And_Report_Inspector
+
+3.Extract the downloaded code to C:\DS3_Input_And_Report_Inspector
+
+4.Open terminal and write "cd C:\DS3_Input_And_Report_Inspector"
+
+5.Create new python virtual enviorment in your current location: python -m venv venv
+
+6.Activate virtual enviorment: .\venv\Scripts\activate
+
+7.Install requirements: pip install -r requirements.txt
+
+8.Run the script: python DS3_Input_And_Report_Inspector.py
 
 ## Donations
 
@@ -51,8 +65,7 @@ https://www.paypal.com/donate/?business=CV5LLN6DKMGYC&no_recurring=0&currency_co
     *   Probe flash memory pages with write-then-read tests.
 *   **Stick Center Calibration (Report 0xF1, Bank A, Offset 0x0020):**
     *   View the 16-byte stick center calibration data segment.
-    *   Adjust individual bytes (B0-B7) of the primary 8-byte calibration data and write changes back to the controller.
-    *   View the combined 16-bit hex values for each analog stick axis (LX, LY, RX, RY).
+    *   Adjust individual bytes (B0-B7) of the primary 8-byte (16-byte for controllers that use 3 pin analog sticks) calibration data and write changes back to the controller.
 *   **Controller Commands:**
     *   Send a restart command to the controller.
     *   Enable/Disable input report streaming (requires PS button press to activate streaming after enabling).
